@@ -12,21 +12,22 @@ function App() {
   const theCatAPI = new TheCatAPI(CatsApiKey);
   React.useEffect(()=>{theCatAPI.images
     .searchImages({
-      limit: 5,
+      limit: 4,
     })
     .then((data) => {
-      setCats(data)
+      setCats(data);
         })
     .catch((error) => {
       console.log(error)
         });
   },[])
+  console.log(cats)
   return (
     <div className='app'>
       <Navbar/>
       <WelcomeCard/>
       <div>
-        <h1>About us</h1>
+        <h2>About us</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem placeat unde commodi officia esse temporibus magnam, harum eum minus quisquam, ducimus expedita vero in. Cum, adipisci officiis! Fuga natus inventore quia reprehenderit, quod dolorem iste, adipisci consequuntur porro laudantium accusamus! Et perspiciatis veritatis architecto debitis fuga, maiores eaque ea? Mollitia fugit ullam corporis. Placeat sequi soluta tempore vitae deleniti fugit sit temporibus consequatur, veritatis commodi saepe a consectetur facilis! Rerum ra, beatae consequatur optio impedit id quod voluptate provident nesciunt cupiditate nihil dolores eligendi molestiae quidem nemo nisi.</p>
       </div>
       <Cats cats={cats}/>

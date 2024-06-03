@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    width: 100%;
 
 }
 .navbar{
@@ -23,7 +24,7 @@
     color: white;
     
 }
-.welcome-card h1{
+.welcome-card h2{
      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     font-size: 60px;
 }
@@ -33,4 +34,26 @@
     position: absolute;
     bottom: -19px;
     right: 0;
+}
+.cats-container{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.cats-container--cards
+{
+    width: 80%;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+.cat-card{
+    width: 18rem; 
+    height: 15rem;
+}
+.cat-card--img{
+    width: 18rem; 
+    height: 15rem;
 }
